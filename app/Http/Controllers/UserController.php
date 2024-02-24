@@ -137,7 +137,12 @@ class UserController extends Controller
         }else{
             return back()->with('error','Email and Password is incorrect');
         }
-        
+    }
+    
+    public function logout(Request $request){
+        $request->session()->flush();
+        Auth::logout();
+        return redirect('/login');   
     }
    
 }

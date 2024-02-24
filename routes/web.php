@@ -15,11 +15,11 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::group(['middleware'=>['is_logout']],function(){
+Route::group(['middleware'=>['is_login']],function(){
     Route::get('/register',[UserController::class, 'loadRegister']);
     Route::post('/register',[UserController::class, 'register'])->name('register');
     Route::get('/referral-register',[UserController::class, 'loadReferralRegister'])->name('load.register');
@@ -28,6 +28,7 @@ Route::group(['middleware'=>['is_logout']],function(){
     Route::post('/login',[UserController::class,'userLogin'])->name('login');
 });
 
-Route::group(['middleware'=>['is_login']],function(){
+Route::group(['middleware'=>['is_logout']],function(){
     Route::get('/dashboard',[DashboardController::class,'index']);
+    Route::get('/logout',[UserController::class,'logout'])->name('logout');
 });
