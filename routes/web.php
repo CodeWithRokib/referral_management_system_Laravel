@@ -29,6 +29,6 @@ Route::group(['middleware'=>['is_login']],function(){
 });
 
 Route::group(['middleware'=>['is_logout']],function(){
-    Route::get('/dashboard',[DashboardController::class,'index']);
+    Route::get('/dashboard',[DashboardController::class,'index'])->name('');
     Route::get('/logout',[UserController::class,'logout'])->name('logout');
 });

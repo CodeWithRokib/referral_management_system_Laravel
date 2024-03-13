@@ -1,3 +1,6 @@
-<h1>Dashboard</h1>
+@extends('backend.layouts.layout')
 
-<a href="{{ route('logout') }}">Logout</a>
+
+@section('content')
+    <h1>dashboard</h1>
+@endsection
