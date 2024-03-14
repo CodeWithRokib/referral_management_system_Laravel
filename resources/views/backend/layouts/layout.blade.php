@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
@@ -24,12 +24,13 @@
             </div>
             <h1><a href="/dashboard" class="logo">Project Name</a></h1>
             <ul class="list-unstyled components mb-5">
-               
+
                 <li>
-                    <a href="{{url('/dashboard')}}"><span class="fa fa-user mr-3"></span> Dashboard</a>
+                    <a href="{{ url('/dashboard') }}"><span class="fa fa-user mr-3"></span> Dashboard</a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa fa-sticky-note mr-3"></span> Friends</a>
+                    <a href="{{url('/referraltrack')}}"><span class="fa fa-sticky-note mr-3"></span>Raferral
+                        Track</a>
                 </li>
                 <li>
                     <a href="#"><span class="fa fa-sticky-note mr-3"></span> Subcription</a>
@@ -38,7 +39,7 @@
                     <a href="#"><span class="fa fa-paper-plane mr-3"></span> Settings</a>
                 </li>
                 <li>
-                    <a href="{{route('logout')}}"><span class="fa fa-paper-plane mr-3"></span>Log Out</a>
+                    <a href="{{ route('logout') }}"><span class="fa fa-paper-plane mr-3"></span>Log Out</a>
                 </li>
             </ul>
 
@@ -50,10 +51,11 @@
         </div>
     </div>
 
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/popper.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/popper.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+
 </body>
 
 </html>
