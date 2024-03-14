@@ -12,5 +12,9 @@ class Network extends Model
         'referral_code',
         'user_id',
         'parent_user_id'
-    ];
+    ]; 
+    
+    public function user(){
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }
